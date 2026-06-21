@@ -1,0 +1,238 @@
+
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: var(--font-sans); }
+  .resume { max-width: 820px; margin: 0 auto; padding: 2rem 1.5rem; color: var(--color-text-primary); }
+  .header { display: flex; justify-content: space-between; align-items: flex-start; padding-bottom: 1.25rem; border-bottom: 1.5px solid var(--color-border-primary); gap: 1rem; }
+  .header-left h1 { font-size: 28px; font-weight: 500; letter-spacing: -0.3px; }
+  .header-left .title { font-size: 13px; color: var(--color-text-secondary); margin-top: 3px; letter-spacing: 1.5px; text-transform: uppercase; }
+  .contact-grid { display: flex; flex-direction: column; gap: 4px; align-items: flex-end; }
+  .contact-item { display: flex; align-items: center; gap: 6px; font-size: 12.5px; color: var(--color-text-secondary); }
+  .contact-item a { color: #185FA5; text-decoration: none; }
+  .contact-item i { font-size: 14px; color: var(--color-text-tertiary); }
+  .section { margin-top: 1.5rem; }
+  .section-title { font-size: 10.5px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: var(--color-text-tertiary); margin-bottom: 0.75rem; padding-bottom: 4px; border-bottom: 0.5px solid var(--color-border-tertiary); }
+  .summary { font-size: 13.5px; line-height: 1.75; color: var(--color-text-secondary); }
+  .summary strong { color: var(--color-text-primary); font-weight: 500; }
+  .exp-item { margin-bottom: 1.25rem; }
+  .exp-header { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 4px; }
+  .exp-role { font-size: 14px; font-weight: 500; }
+  .exp-company { font-size: 13px; color: #185FA5; font-weight: 500; }
+  .exp-meta { font-size: 12px; color: var(--color-text-tertiary); text-align: right; }
+  .exp-bullets { margin-top: 0.5rem; padding-left: 1rem; }
+  .exp-bullets li { font-size: 13px; line-height: 1.7; color: var(--color-text-secondary); margin-bottom: 3px; }
+  .exp-bullets li strong { color: var(--color-text-primary); font-weight: 500; }
+  .proj-tag { display: inline-block; font-size: 11px; background: var(--color-background-secondary); color: var(--color-text-secondary); border: 0.5px solid var(--color-border-tertiary); border-radius: 4px; padding: 2px 7px; margin: 2px 2px 0 0; }
+  .projects-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .proj-card { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-md); padding: 0.75rem 1rem; }
+  .proj-card-title { font-size: 13px; font-weight: 500; margin-bottom: 4px; }
+  .proj-card-desc { font-size: 12px; line-height: 1.6; color: var(--color-text-secondary); margin-bottom: 6px; }
+  .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 10px; }
+  .skill-group { }
+  .skill-label { font-size: 12px; font-weight: 500; color: var(--color-text-secondary); margin-bottom: 5px; }
+  .skill-tags { display: flex; flex-wrap: wrap; gap: 4px; }
+  .skill-tag { font-size: 11.5px; background: var(--color-background-secondary); color: var(--color-text-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: 4px; padding: 3px 8px; }
+  .skill-tag.highlight { background: #E6F1FB; color: #0C447C; border-color: #B5D4F4; }
+  .certs-list { display: flex; flex-wrap: wrap; gap: 6px; }
+  .cert-badge { display: flex; align-items: center; gap: 5px; font-size: 12px; background: var(--color-background-secondary); border: 0.5px solid var(--color-border-tertiary); border-radius: 4px; padding: 5px 10px; color: var(--color-text-secondary); }
+  .cert-badge i { font-size: 13px; color: #185FA5; }
+  .edu-row { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; }
+  .edu-deg { font-size: 14px; font-weight: 500; }
+  .edu-uni { font-size: 13px; color: var(--color-text-secondary); margin-top: 2px; }
+  .edu-spec { font-size: 12.5px; color: var(--color-text-tertiary); margin-top: 4px; }
+  .edu-meta { font-size: 12px; color: var(--color-text-tertiary); text-align: right; }
+  .divider { height: 0.5px; background: var(--color-border-tertiary); margin: 1.5rem 0; }
+  @media (max-width: 600px) {
+    .header { flex-direction: column; }
+    .contact-grid { align-items: flex-start; }
+    .projects-grid { grid-template-columns: 1fr; }
+    .exp-meta { text-align: left; }
+  }
+</style>
+
+<div class="resume">
+  <h2 class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)">Resume of Yash Gupta – Embedded Systems & Cloud Developer</h2>
+
+  <div class="header">
+    <div class="header-left">
+      <h1>Yash Gupta</h1>
+      <div class="title">Embedded Systems &amp; DevOps Engineer</div>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-item"><i class="ti ti-mail" aria-hidden="true"></i><a href="mailto:mail@yashx.space">mail@yashx.space</a></div>
+      <div class="contact-item"><i class="ti ti-phone" aria-hidden="true"></i>+91 78394 91779</div>
+      <div class="contact-item"><i class="ti ti-map-pin" aria-hidden="true"></i>Bareilly, Uttar Pradesh, India</div>
+      <div class="contact-item"><i class="ti ti-brand-github" aria-hidden="true"></i><a href="https://github.com/Yash-xoxo" target="_blank">Yash-xoxo</a></div>
+      <div class="contact-item"><i class="ti ti-brand-linkedin" aria-hidden="true"></i><a href="#">LinkedIn Profile</a></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">About</div>
+    <p class="summary">
+      <strong>Embedded Systems &amp; DevOps Engineer</strong> with hands-on experience in hardware-firmware integration, containerized infrastructure, and CI/CD automation. Demonstrated ability to build production-grade systems — from <strong>ESP32-based CNC plotters</strong> and <strong>Proxmox hypervisors</strong> to <strong>Kubernetes auto-scaling clusters</strong>. Currently completing a B.Tech in Computer Science (July 2026) with a specialization in Software Engineering and Database Management. Actively seeking a role where low-level hardware control meets modern cloud-native tooling.
+    </p>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Work Experience</div>
+    <div class="exp-item">
+      <div class="exp-header">
+        <div>
+          <div class="exp-role">DevOps &amp; Embedded Infrastructure Engineer Intern</div>
+          <div class="exp-company">LinuxWorld Informatics Pvt Ltd</div>
+        </div>
+        <div class="exp-meta">Jun 2025 – Aug 2025<br>Jaipur, Rajasthan</div>
+      </div>
+      <ul class="exp-bullets">
+        <li>Built and managed <strong>containerized environments</strong> using Docker &amp; Kubernetes to simulate production workloads; deployed multi-node clusters with live traffic testing.</li>
+        <li>Designed <strong>CI/CD pipelines</strong> with Jenkins (commit-triggered build → test → Docker image push → deploy) for Python microservices, cutting manual release cycles.</li>
+        <li>Automated <strong>infrastructure provisioning</strong> using Terraform and Ansible across AWS (EC2, S3, IAM, VPC), eliminating manual configuration overhead.</li>
+        <li>Implemented <strong>Prometheus + Grafana monitoring stack</strong> with alerting for real-time system health and resource utilization tracking.</li>
+        <li>Maintained <strong>Linux-based bare-metal servers</strong> (RHEL, Ubuntu) and resolved real-time infrastructure issues under simulated production load.</li>
+        <li>Delivered <strong>Automation Control Center</strong> — unified web dashboard integrating Docker, Kubernetes, AWS, Terraform, Ansible, Jenkins &amp; messaging workflows (Streamlit).</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Projects</div>
+    <div class="projects-grid">
+
+      <div class="proj-card">
+        <div class="proj-card-title"><i class="ti ti-cpu" aria-hidden="true" style="font-size:13px;margin-right:4px;color:#185FA5"></i>CNC Machine Writer — Firmware &amp; G-code Engine</div>
+        <div class="proj-card-desc">ESP32-based 3-axis pen plotter that interprets G-code and drives a CNC shield via GRBL firmware. Fully offline; on-device logic parses and executes G-code for physical drawing precision.</div>
+        <div><span class="proj-tag">ESP32</span><span class="proj-tag">GRBL</span><span class="proj-tag">CNC Shield</span><span class="proj-tag">G-code Parser</span><span class="proj-tag">Embedded C</span></div>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-card-title"><i class="ti ti-server" aria-hidden="true" style="font-size:13px;margin-right:4px;color:#185FA5"></i>Proxmox Type-1 Hypervisor Deployment</div>
+        <div class="proj-card-desc">Enterprise-grade on-premises virtualization stack with KVM/QEMU VMs and LXC containers; configured ZFS storage pools, virtual networking, and ISO provisioning for full DevOps lab.</div>
+        <div><span class="proj-tag">Proxmox VE</span><span class="proj-tag">KVM/QEMU</span><span class="proj-tag">LXC</span><span class="proj-tag">ZFS</span><span class="proj-tag">Debian</span></div>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-card-title"><i class="ti ti-git-branch" aria-hidden="true" style="font-size:13px;margin-right:4px;color:#185FA5"></i>Kubernetes Auto-Scaling Web Cluster</div>
+        <div class="proj-card-desc">Self-healing web infrastructure using Horizontal Pod Autoscaler (HPA), stress-tested with 10+ replica pods. CPU-driven autoscaling with NodePort exposure and live traffic simulation.</div>
+        <div><span class="proj-tag">Kubernetes HPA</span><span class="proj-tag">Minikube</span><span class="proj-tag">Docker</span><span class="proj-tag">Apache HTTPD</span></div>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-card-title"><i class="ti ti-circuit-board" aria-hidden="true" style="font-size:13px;margin-right:4px;color:#185FA5"></i>Offline AI Model Ecosystem</div>
+        <div class="proj-card-desc">Air-gapped local inference platform running LLaMA 3.1, DeepSeek, and Gemma via Ollama with hardware-accelerated multi-model management and integrated text/vision generation.</div>
+        <div><span class="proj-tag">Ollama</span><span class="proj-tag">LLaMA 3.1</span><span class="proj-tag">Open WebUI</span><span class="proj-tag">Hugging Face</span></div>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-card-title"><i class="ti ti-atom" aria-hidden="true" style="font-size:13px;margin-right:4px;color:#185FA5"></i>Distributed Computing — BOINC &amp; Folding@Home</div>
+        <div class="proj-card-desc">Configured multi-core workloads for scientific compute (COVID, cancer, Alzheimer's research). Automated project prioritization and resource budgeting via Systemd on Linux.</div>
+        <div><span class="proj-tag">BOINC</span><span class="proj-tag">Folding@Home</span><span class="proj-tag">Linux</span><span class="proj-tag">Systemd</span></div>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-card-title"><i class="ti ti-robot" aria-hidden="true" style="font-size:13px;margin-right:4px;color:#185FA5"></i>n8n AI Workflow Engine</div>
+        <div class="proj-card-desc">Autonomous LLM-powered data pipeline with 45-minute aggregation cycles; summarizes Kubernetes/Cloud/DevOps feeds and publishes to Telegram/Discord via chatbot automation.</div>
+        <div><span class="proj-tag">n8n</span><span class="proj-tag">Gemini API</span><span class="proj-tag">Docker</span><span class="proj-tag">Telegram Bot</span></div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Skills &amp; Tools</div>
+    <div class="skills-grid">
+      <div class="skill-group">
+        <div class="skill-label">Embedded &amp; Hardware</div>
+        <div class="skill-tags">
+          <span class="skill-tag highlight">ESP32</span>
+          <span class="skill-tag highlight">GRBL Firmware</span>
+          <span class="skill-tag highlight">CNC Shield</span>
+          <span class="skill-tag highlight">G-code</span>
+          <span class="skill-tag">KVM/QEMU</span>
+          <span class="skill-tag">Proxmox VE</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-label">DevOps &amp; Containers</div>
+        <div class="skill-tags">
+          <span class="skill-tag highlight">Docker</span>
+          <span class="skill-tag highlight">Kubernetes</span>
+          <span class="skill-tag">Jenkins</span>
+          <span class="skill-tag">GitHub Actions</span>
+          <span class="skill-tag">Terraform</span>
+          <span class="skill-tag">Ansible</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-label">Cloud &amp; Infra</div>
+        <div class="skill-tags">
+          <span class="skill-tag">AWS EC2</span>
+          <span class="skill-tag">S3</span>
+          <span class="skill-tag">IAM</span>
+          <span class="skill-tag">VPC</span>
+          <span class="skill-tag">CloudWatch</span>
+          <span class="skill-tag">Prometheus</span>
+          <span class="skill-tag">Grafana</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-label">Operating Systems</div>
+        <div class="skill-tags">
+          <span class="skill-tag highlight">Linux (RHEL)</span>
+          <span class="skill-tag">Ubuntu</span>
+          <span class="skill-tag">Arch Linux</span>
+          <span class="skill-tag">Fedora</span>
+          <span class="skill-tag">Debian</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-label">Languages &amp; Scripting</div>
+        <div class="skill-tags">
+          <span class="skill-tag highlight">Python</span>
+          <span class="skill-tag highlight">Bash</span>
+          <span class="skill-tag">Flask</span>
+          <span class="skill-tag">Node.js</span>
+          <span class="skill-tag">React</span>
+          <span class="skill-tag">MongoDB</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-label">Protocols &amp; Concepts</div>
+        <div class="skill-tags">
+          <span class="skill-tag highlight">CI/CD Pipelines</span>
+          <span class="skill-tag highlight">IaC</span>
+          <span class="skill-tag">ZFS</span>
+          <span class="skill-tag">Systemd</span>
+          <span class="skill-tag">PostgreSQL</span>
+          <span class="skill-tag">RandomX PoW</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Certifications</div>
+    <div class="certs-list">
+      <div class="cert-badge"><i class="ti ti-award" aria-hidden="true"></i>AWS Cloud Quest: Gen AI Practitioner</div>
+      <div class="cert-badge"><i class="ti ti-award" aria-hidden="true"></i>AWS Cloud Quest: Cloud Practitioner</div>
+      <div class="cert-badge"><i class="ti ti-certificate" aria-hidden="true"></i>RHCSA – EX200 (Udemy)</div>
+      <div class="cert-badge"><i class="ti ti-certificate" aria-hidden="true"></i>Kubernetes 入門 LFS158JP – Linux Foundation</div>
+      <div class="cert-badge"><i class="ti ti-certificate" aria-hidden="true"></i>Blockchain: LFS170 – Linux Foundation</div>
+      <div class="cert-badge"><i class="ti ti-certificate" aria-hidden="true"></i>PostgreSQL Bootcamp – Udemy</div>
+      <div class="cert-badge"><i class="ti ti-certificate" aria-hidden="true"></i>AWS Cloud with AI Workshop – LinuxWorld</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Education</div>
+    <div class="edu-row">
+      <div>
+        <div class="edu-deg">Bachelor of Technology — Computer Science</div>
+        <div class="edu-uni">Dr. A.P.J. Abdul Kalam Technical University, Bareilly</div>
+        <div class="edu-spec">Specialization: Software Engineering &amp; Database Management · OS &amp; Algorithms</div>
+      </div>
+      <div class="edu-meta">Aug 2022 – Jul 2026<br>Bareilly, UP</div>
+    </div>
+  </div>
+
+</div>
